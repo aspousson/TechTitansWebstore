@@ -1,0 +1,67 @@
+CREATE DATABASE TechTitans;
+CREATE TABLE users
+(
+	userID INT AUTO_INCREMENT PRIMARY KEY,
+	username VARCHAR(255) NOT NULL,
+	password VARCHAR(255) NOT NULL,
+	name VARCHAR(255) NOT NULL,
+	address VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE videogames
+(
+	videogameID INT AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(255) NOT NULL,
+	developer VARCHAR(255) NOT NULL,
+	genre VARCHAR(255) NOT NULL,
+	price DECIMAL(10,2) NOT NULL,
+	picturepath VARCHAR(255),
+	description TEXT,
+	userAdd BOOLEAN DEFAULT FALSE,
+	lister INT,
+	FOREIGN KEY (lister) REFERENCES users(userID)
+);
+
+CREATE TABLE comicbooks
+(
+	comicbookID INT AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(255) NOT NULL,
+	author VARCHAR(255) NOT NULL,
+	genre VARCHAR(255) NOT NULL,
+	price DECIMAL(10,2) NOT NULL,
+	picturepath VARCHAR(255),
+	description TEXT
+	userAdd BOOLEAN DEFAULT FALSE,
+	lister INT,
+	FOREIGN KEY (lister) REFERENCES users(userID)
+);
+
+CREATE TABLE reviews
+(
+	userID INT,
+	videoGameID INT,
+	comicbookID INT,
+	FOREIGN KEY (userID) REFERENCES users(userID),
+	FOREIGN KEY (videoGameID) REFERENCES videogames(videogameID),
+	FOREIGN KEY (comicbookID) REFERENCES comicbooks(comicbookID)
+);
+
+CREATE TABLE contact
+(
+	userID INT,
+	email VARCHAR(255) NOT NULL,
+	orderNumber INT,
+	description TEXT NOT NULL,
+	FOREIGN KEY (userID) REFERENCES users(userID)
+);
+
+CREATE TABLE cart
+(
+	userID INT,
+	videoGameID INT,
+	comicbookID INT,
+	price DECIMAL(10,2) NOT NULL,
+	FOREIGN KEY (userID) REFERENCES users(userID),
+	FOREIGN KEY (videoGameID) REFERENCES videogames(videogameID),
+	FOREIGN KEY (comicbookID) REFERENCES comicbooks(comicbookID)
+);

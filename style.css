@@ -1,0 +1,295 @@
+/*
+    Style sheet for store webpage
+    Date last modified: 3/23/24
+    Who last modified: Jett Rogers
+*/
+
+/*Code for search bar and icons*/
+
+.header{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+/*-----------------------------------------------------Style Code for search bar---------------------------------*/
+.search 
+{
+    position: relative;
+    width: 700px;
+    margin: 20px;
+    overflow: hidden; /* Hide the overflowing content */
+}
+
+.searchInput 
+{
+    width: calc(100% - 40px);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+/*Code for icons*/
+
+#mcneeselogotop 
+{
+    width: 80px;
+    height: 75px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*-----------------------------------------------------Style Code for sign in button---------------------------------*/
+#signin 
+{
+    display: inline-block; /* Ensures the anchor behaves as a block-level element */
+    margin-top: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.signinbutton 
+{
+    position: relative;
+    overflow: hidden; /* Hide the overflowing content */
+}
+
+#signin button 
+{
+    background-color: white;
+    text-align: left; /*Align the text to the left*/
+    position: relative;
+    font-size: 17px;
+    width: 85px;
+}
+
+#signinImage 
+{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: auto;
+}
+/*-----------------------------------------------------Style Code for Cart button---------------------------------*/
+#cart 
+{
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.cartbutton 
+{
+    position: relative;
+    overflow: hidden; /* Hide the overflowing content */
+}
+
+#cart button 
+{
+    background-color: white;
+    text-align: left; /*Align the text to the left*/
+	
+    position: relative;
+    font-size: 17px;
+    width: 70px;
+}
+
+#cart button:active .cartView{
+    left:calc(100% - 500px);
+
+}
+
+
+#cartImage 
+{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: auto;
+}
+
+/*-----------------------------------------------------Style Code for listing button---------------------------------*/
+#listing
+{
+    display: inline-block;
+    margin-left: 50px;
+}
+
+#listing button 
+{
+    background-color: white;
+    text-align: left; /*Align the text to the left*/
+	
+    position: relative;
+    font-size: 17px;
+    width: 70px;
+}
+
+/*-----------------------------------------------------Style Code for nav bar---------------------------------*/
+nav 
+{
+    background-color: rgba(4, 82, 156, 255);
+    overflow: hidden;
+}
+
+.navbar 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center; /*Align the text to the center*/
+}
+
+.navbar li 
+{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navbar li a 
+{
+    font-size: 18px;
+    display: block;
+    color: rgb(252, 252, 0);
+    text-align: center; /*Align the text to the center*/
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover 
+{
+    background-color: #ddd;
+    color: black;
+}
+
+/*-----------------------------------------------------Style Code for Footer----------------------------------------------------*/
+footer {
+    background-color: rgba(4, 82, 156, 255);
+    color: white;
+    text-align: center; /*Align the text to the center*/
+    padding: 10px;
+    grid-row: 1;
+    width: 100%;
+}
+
+.footer 
+{
+    display: flex;
+    width: 100%;
+} 
+
+.storeHours 
+{
+    margin-right: auto;
+    max-width: 250px;
+}
+
+.addressPhonenumber 
+{
+    flex: 1;
+    text-align: center; /*Align the text to the center*/
+}
+
+.contactUs 
+{
+    margin-left: auto;
+    max-width: 200px;
+}
+
+.socialMedia ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center; /*Align the text to the center*/
+}
+
+.socialMedia li 
+{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.socialMedia img 
+{
+    width: 40px;
+    height: 38px;
+    margin-top: 10px;
+}
+
+
+/*-----------------------------------------------------Comics Page---------------------------------------------------------*/
+ #gameContainer, #bookContainer, #RomanceContainer, #HorrorContainer, #SuperheroContainer, #MangaContainer, .videogamescontainer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.book {
+    width: calc(25% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book img {
+    width: 100%;
+    object-fit:fill;
+}
+.genre {
+    display: block;
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    transform: translateY(110%); /* Start hidden below the book element */
+    transition: transform 1s ease; /* Smooth transition effect */
+    box-sizing: border-box;
+}
+.book:hover .description {
+    transform: translateY(0); /* Slide description into view on hover */
+}
+
+.add-to-cart-btn {
+    bottom: 20px;
+    left: 50%;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+.add-to-cart-btn:active {
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .book {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .book {
+        width: 100%;
+    }
+}

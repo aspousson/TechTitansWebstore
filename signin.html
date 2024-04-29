@@ -1,0 +1,31 @@
+<!--
+    TechTitans
+    McNeese Online Bookstore Sign in page
+    Author: Jett Rogers
+    Created On: 2/18/2024
+-->
+
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign In</title>
+        <link rel="stylesheet" href="signin_style.css">
+    </head>
+    <body>
+        <div class="main">
+            <h1>TechTitans Store</h1>
+            <h3>Sign In</h3>
+            <form action="signin.php" method="POST">
+                <label for="username">Username:</label>
+                <input type="username" id="username" name="username" placeholder="Enter your Username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+
+                <button type="submit" name="submit">Submit</button>
+            </form>
+            <p>Not Registered? <a href="signUp.html">Create an Account</a></p>
+        </div>
+    </body>
+</html>
