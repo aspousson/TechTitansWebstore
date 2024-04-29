@@ -1,0 +1,52 @@
+/*
+CSS stylesheet for McNeese Online bookstore cart
+Author: Jett Rogers
+Created On: 3/28/2024
+*/
+body {
+  width: 100%;
+}
+
+.cart {
+  display: block;
+  width: 75%;
+  left: 25%;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  align-items: center;
+}
+
+.item {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+}
+
+.removeItem {
+  width: 25px;
+}
+
+#checkout {
+  width: 15%;
+}
+
+.info {
+  display: block;
+  width: 75%;
+}
+
+.removeAll{
+  color: red;
+}
+
+.img{
+  height: 50px;
+}
